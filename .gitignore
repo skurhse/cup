@@ -1,1 +1,4 @@
 *.obj
+tests/cup2/bin/bin/
+tests/cup2/bin/src/core
+tests/cup2/bin/src/core.cup
