@@ -8,12 +8,12 @@ dirname=$(dirname "$realpath")
 
 cd "$dirname"
 
-pushd tests/cup2
+cd tests/cup2
 
 mkdir -p bin/src
 cp src/core src/_/core/core.cup bin/src/
 
-pushd bin
+cd bin
 
 mkdir -p bin
 ./cup build -i ./src -o ./bin/test.c
@@ -24,7 +24,4 @@ sed -i '/^  l:$/d' ./bin/test.c
 
 gcc -o ./bin/test ./bin/test.c
 
-./bin/test
-
-popd
-
+bin/test
